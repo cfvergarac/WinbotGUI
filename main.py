@@ -8,7 +8,7 @@ from tkinter.ttk import Combobox
 window = Tk()
 window.call('wm', 'iconphoto', window._w,PhotoImage(file='img/flighticon.PNG'))
 window.title("WINGBOT")
-window.geometry('450x200')
+window.geometry('460x200')
 
 
 #FRAME NAVEGADORES
@@ -104,6 +104,10 @@ txtMesIda.pack(side=LEFT)
 
 txtDiaIda = Spinbox(frameFE, from_=today.day, to=31, width=2)
 txtDiaIda.pack(side=LEFT)
+
+radRT = Radiobutton(frameFE,text='RT')
+radRT.deselect()
+radRT.pack(side=LEFT)
 
 
 
