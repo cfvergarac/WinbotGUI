@@ -1,0 +1,6 @@
+debug.log
+debug.txt
+*.log
+/resgui/
+/resgui/
+/__pycache__/
