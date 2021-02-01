@@ -4,6 +4,7 @@ from datetime import date
 from tkinter import *
 from tkinter.ttk import Combobox
 
+
 #CONFIGURACION DE LA VENTANA PRINCIPAL
 window = Tk()
 window.call('wm', 'iconphoto', window._w,PhotoImage(file='img/flighticon.PNG'))
@@ -85,16 +86,19 @@ txtinf.pack(side=RIGHT)
 #FRAME FECHAS
 today = date.today()
 
-today = date.today()
-
 meses = ['01', '02', '03', '04', '05', '06', '07', '08', '09', '10', '11', '12']
 dias =  ['01', '02', '03', '04', '05', '06', '07', '08', '09', '10', '11', '12', '13', '14', '15', '16', '17', '18','19','20','21','22','23','24','25','26','27','28','29','30','31']
 
 frameFE = LabelFrame(window, width=150, height=100, text="Fechas (AAAA/MM/DD):" )
 frameFE.grid(column=3, row=1)
 
+frameFEV = LabelFrame(window, width=150, height=100)
+frameFEV.grid(column=3, row=3)
+
 lblIDA = Label(frameFE,text="IDA")
 lblIDA.pack(side=LEFT)
+
+lblVUELTA = Label(frameFEV,text="VUE")
 
 txtAnoIda = Spinbox(frameFE, from_=today.year, to=2050, width=4)
 txtAnoIda.pack(side=LEFT)
@@ -105,9 +109,30 @@ txtMesIda.pack(side=LEFT)
 txtDiaIda = Spinbox(frameFE, from_=today.day, to=31, width=2)
 txtDiaIda.pack(side=LEFT)
 
-radRT = Radiobutton(frameFE,text='RT')
-radRT.deselect()
-radRT.pack(side=LEFT)
+txtAnoVuelta = Spinbox(frameFEV, from_=today.year, to=2050, width=4)
+txtMesVuelta = Spinbox(frameFEV, from_=today.month, to=12, width=2)
+txtDiaVuelta = Spinbox(frameFEV, from_=today.day, to=31, width=2)
+
+
+isRT = BooleanVar()  # Declara variable de tipo booleana
+isRT.set(False)
+
+def agregaRT():
+    if isRT.get() == True:
+        lblVUELTA.pack(side=LEFT)
+        txtAnoVuelta.pack(side=LEFT)
+        txtMesVuelta.pack(side=LEFT)
+        txtDiaVuelta.pack(side=LEFT)
+    elif isRT.get() == False:
+        lblVUELTA.pack_forget()
+        txtAnoVuelta.pack_forget()
+        txtMesVuelta.pack_forget()
+        txtDiaVuelta.pack_forget()
+        
+
+ChRT = Checkbutton (frameFE, text="RT", variable = isRT, onvalue =True , offvalue =False, command=agregaRT )
+ChRT.pack(side=LEFT)
+
 
 
 
@@ -116,7 +141,7 @@ def ejecutar():
     mes= meses[int(txtMesIda.get())-1]
     dia= dias[int(txtDiaIda.get())-1]
     fechaIda = "-".join([txtAnoIda.get(),mes, dia])
-    #print(fechaIda)
+    #print(isRT)
     functions.ejecuta(nav.get(), comboAmb.get(), comboMod.get(), comboIDA.get(), comboVUELTA.get(),txtAdultos.get(), txtninos.get(), txtinf.get(), fechaIda, 'x' )
     
 btn = Button(window, text="Ejecutar", bg="purple", fg="white", command=ejecutar)
