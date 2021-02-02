@@ -141,8 +141,17 @@ def ejecutar():
     mes= meses[int(txtMesIda.get())-1]
     dia= dias[int(txtDiaIda.get())-1]
     fechaIda = "-".join([txtAnoIda.get(),mes, dia])
+    
+    if isRT.get() == True:
+      mesVuelta= meses[int(txtMesVuelta.get())-1]
+      diaVuelta= dias[int(txtDiaVuelta.get())-1]
+      fechaVuelta = "-".join([txtAnoVuelta.get(),mesVuelta, diaVuelta])
+  
+    elif isRT.get() == False:
+      fechaVuelta = 'x'
+    
     #print(isRT)
-    functions.ejecuta(nav.get(), comboAmb.get(), comboMod.get(), comboIDA.get(), comboVUELTA.get(),txtAdultos.get(), txtninos.get(), txtinf.get(), fechaIda, 'x' )
+    functions.ejecuta(nav.get(), comboAmb.get(), comboMod.get(), comboIDA.get(), comboVUELTA.get(),txtAdultos.get(), txtninos.get(), txtinf.get(), fechaIda, fechaVuelta )
     
 btn = Button(window, text="Ejecutar", bg="purple", fg="white", command=ejecutar)
 btn.grid(column=1, row=3)
