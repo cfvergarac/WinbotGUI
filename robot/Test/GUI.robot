@@ -22,9 +22,9 @@ ${FVUELTA}      2021-06-28
 Flujo_compra
     [Arguments]     ${AMBIENTE}    ${ORIGEN}     ${DESTINO}    ${FECHAIDA}    ${FECHAVUELTA}   ${NADULTOS}    ${NNINOS}    ${NINFANTES}    ${MONEDA}    ${NAVEGADOR}
     ${URL}=    concatena url       ${AMBIENTE}   ${ORIGEN}     ${DESTINO}    ${FECHAIDA}    ${FECHAVUELTA}    ${NADULTOS}   ${NNINOS}   ${NINFANTES}   ${MONEDA}   ${NAVEGADOR}
-    #Manejo_flex
-    #Seleccionar_flex      no
-	Sleep   30s
+    Manejo_flex
+    Seleccionar_flex      no
+    #Sleep   30s
     Llena_datos_viajero
     Agregar_ancillarie    no
     continuar_a_sillas
