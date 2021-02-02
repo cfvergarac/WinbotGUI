@@ -628,7 +628,7 @@ Pago_tarjeta_credito
 #############################  KEYWORDS ENTRAR DESDE TARIFAS    ######################
 concatena url
     [arguments]    ${AMBIENTE}    ${UCIUDADIDA}   ${UCIUDADVUELTA}   ${UFECHAIDA}    ${UFECHAVUELTA}     ${UADULTOS}    ${UNINOS}    ${UINFANTES}    ${UMONEDA}    ${UNAVEGADOR}
-    Run Keyword If  ('${UFECHAVUELTA}' <> 'x')    asigna url RT    ${AMBIENTE}    ${UCIUDADIDA}   ${UCIUDADVUELTA}   ${UFECHAIDA}    ${UFECHAVUELTA}     ${UADULTOS}    ${UNINOS}    ${UINFANTES}    ${UMONEDA}
+    Run Keyword If  ('${UFECHAVUELTA}' != 'x')    asigna url RT    ${AMBIENTE}    ${UCIUDADIDA}   ${UCIUDADVUELTA}   ${UFECHAIDA}    ${UFECHAVUELTA}     ${UADULTOS}    ${UNINOS}    ${UINFANTES}    ${UMONEDA}
     Run Keyword If  ('${UFECHAVUELTA}' == 'x')    asigna url OW    ${AMBIENTE}    ${UCIUDADIDA}   ${UCIUDADVUELTA}   ${UFECHAIDA}    ${UADULTOS}    ${UNINOS}    ${UINFANTES}    ${UMONEDA}
 
     Run Keyword If   $AMBIENTE in $PAGINASESP     set test variable    ${IDIOMA}        'ES'
@@ -667,7 +667,7 @@ abre navegador en tarifas
 
 entra a tarifas
     [arguments]    ${UINFANTES}
-    Run Keyword If  ('${UINFANTES}' <> '0')    Valida_infantes
+    Run Keyword If  ('${UINFANTES}' != '0')    Valida_infantes
     Wait Until Page Contains     ${TxtTarifas}
 
 crea pasajeros
