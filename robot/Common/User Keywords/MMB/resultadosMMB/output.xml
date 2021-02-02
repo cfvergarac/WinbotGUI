@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<robot rpa="false" generated="20200117 16:20:50.529" generator="Robot 3.1.2 (Python 2.7.16 on win32)">
+<suite source="D:\Automatizacion python\Wingo\Wingo\Common\User Keywords\MMB\KeywordsMMB.robot" id="s1" name="KeywordsMMB">
+<test id="s1-t1" name="abrirpagina">
+<kw name="abrir MMB">
+<arguments>
+<arg>QA</arg>
+<arg>gc</arg>
+</arguments>
+<kw name="Open Browser" library="SeleniumLibrary">
+<doc>Opens a new browser instance to the given ``url``.</doc>
+<arguments>
+<arg>${URL.${AMBIENTE}}</arg>
+<arg>${NAVEGADOR}</arg>
+</arguments>
+<msg timestamp="20200117 16:20:50.809" level="INFO">Opening browser 'gc' to base url 'http://mmb-qa.wingo.com'.</msg>
+<kw name="Capture Page Screenshot" library="SeleniumLibrary">
+<doc>Takes screenshot of the current page and embeds it into log file.</doc>
+<status status="FAIL" endtime="20200117 16:20:54.395" starttime="20200117 16:20:54.395"></status>
+</kw>
+<msg timestamp="20200117 16:20:54.395" level="WARN">Keyword 'Capture Page Screenshot' could not be run on failure: Execution terminated by signal</msg>
+<status status="FAIL" endtime="20200117 16:20:54.396" starttime="20200117 16:20:50.809"></status>
+</kw>
+<status status="FAIL" endtime="20200117 16:20:54.397" starttime="20200117 16:20:50.809"></status>
+</kw>
+<status status="FAIL" endtime="20200117 16:20:54.397" critical="yes" starttime="20200117 16:20:50.808">Execution terminated by signal</status>
+</test>
+<status status="FAIL" endtime="20200117 16:20:54.400" starttime="20200117 16:20:50.531"></status>
+</suite>
+<statistics>
+<total>
+<stat fail="1" pass="0">Critical Tests</stat>
+<stat fail="1" pass="0">All Tests</stat>
+</total>
+<tag>
+</tag>
+<suite>
+<stat fail="1" id="s1" name="KeywordsMMB" pass="0">KeywordsMMB</stat>
+</suite>
+</statistics>
+<errors>
+<msg timestamp="20200117 16:20:50.804" level="ERROR">Error in file 'D:\Automatizacion python\Wingo\Wingo\Common\User Keywords\MMB\KeywordsMMB.robot': Resource file '..\..\PO\IBE\PaginaPrincipal.robot' does not exist.</msg>
+<msg timestamp="20200117 16:20:54.395" level="WARN">Keyword 'Capture Page Screenshot' could not be run on failure: Execution terminated by signal</msg>
+</errors>
+</robot>

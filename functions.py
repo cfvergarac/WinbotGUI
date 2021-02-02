@@ -3,7 +3,8 @@ from subprocess import call
 
 def ejecuta(navegador, ambiente, moneda, ida, vuelta, nadultos, nninos, ninfantes, fida, fvuelta):
     
-    ruta= 'D:\Automatizacion python\Wingo\Wingo\Test\GUI.robot'
+    #ruta= 'D:\Automatizacion python\Wingo\Wingo\Test\GUI.robot'
+    ruta= 'robot\Test\GUI.robot'
     variable = '--variable'
     
     call(['robot','-d', 'resgui',
@@ -19,6 +20,5 @@ def ejecuta(navegador, ambiente, moneda, ida, vuelta, nadultos, nninos, ninfante
     variable , 'FVUELTA:'+fvuelta,
     ruta])
     
-
 
 #robot --variable NAVEGADOR:ff -d res GUI.robot
