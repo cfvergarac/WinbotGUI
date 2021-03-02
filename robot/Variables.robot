@@ -26,11 +26,11 @@ ${APELLIDOAUT}   Automatizacion
 &{ANCI}     CA=Checkin en aeropuerto      PA=Prioridad de abordaje   no=no
 
 #DATOS TARJETAS
-${NumeroTarjeta}       5454545454545454         #5454545454541111   #4539 4175 1776 7891
+${NumeroTarjeta}       5460635858368454         #5454545454541111   #4539 4175 1776 7891
 ${FechaExpiracion}    0621     #0729     #0621  #0221
 ${MesExpiracion}      02
-${AnoExpiracion}      21
-${CodigoExpiracion}   555     # 814   #555
+${AnoExpiracion}      23
+${CodigoExpiracion}   820     # 814   #555
 ${Direccion}        Cra 75K No 56-13
 ${Ciudad}        Bogota
 

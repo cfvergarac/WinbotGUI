@@ -220,7 +220,7 @@ BundlesRT
     Run Keyword If  ${ExistePPOtraruta}    Click Element     //img[@alt='close']
 
     Run Keyword If     ('${BundleDesplegado2}' == 'FAIL')    Click Javascript    ${RDBVUELOVUELTA}
-    CLick Element      (//div[@class='card-info'])[4]
+    Click Javascript      xpath=(//div[@class='card-info'])[4]
 
     #Click Javascript     ${RDBVUELOVUELTA}
     #Click Javascript    ${RDBVUELOVUELTA}
@@ -279,7 +279,7 @@ continuar_a_sillas
     Run Keyword If    ${present}    Click Javascript      ${NOSERVICIOS}
 
 Llena_datos_viajero
-    Wait Until Page Contains    ${TxtPasajeros}   10s
+    Wait Until Page Contains    ${TxtPasajeros}  
     Run Keyword If  ('${NAVEGADOR}' == 'ff')   Quita elementos firefox
     Ingresa_adultos
     ${TIENENINOS}=   Evaluate    ${NUMNINOS} > 0
