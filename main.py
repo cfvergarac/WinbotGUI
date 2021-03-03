@@ -117,6 +117,7 @@ txtDiaVuelta = Spinbox(frameFEV, from_=today.day, to=31, width=2)
 isRT = BooleanVar()  # Declara variable de tipo booleana
 isRT.set(False)
 
+
 def agregaRT():
     if isRT.get() == True:
         lblVUELTA.pack(side=LEFT)
@@ -133,7 +134,12 @@ def agregaRT():
 ChRT = Checkbutton (frameFE, text="RT", variable = isRT, onvalue =True , offvalue =False, command=agregaRT )
 ChRT.pack(side=LEFT)
 
+#CHECKBOX DESDE TARIFAS
+isTarifas = BooleanVar()  # Declara variable de tipo booleana
+isTarifas.set(False)
 
+ChTa = Checkbutton (text="Desde Tarifas", variable = isTarifas, onvalue =True , offvalue =False )
+ChTa.grid(column=2, row=3)
 
 
 #BOTON EJECUTAR
@@ -151,7 +157,7 @@ def ejecutar():
       fechaVuelta = 'x'
     
     #print(isRT)
-    functions.ejecuta(nav.get(), comboAmb.get(), comboMod.get(), comboIDA.get(), comboVUELTA.get(),txtAdultos.get(), txtninos.get(), txtinf.get(), fechaIda, fechaVuelta )
+    functions.ejecuta(nav.get(), comboAmb.get(), comboMod.get(), comboIDA.get(), comboVUELTA.get(),txtAdultos.get(), txtninos.get(), txtinf.get(), fechaIda, fechaVuelta, isTarifas.get() )
     
 btn = Button(window, text="Ejecutar", bg="purple", fg="white", command=ejecutar)
 btn.grid(column=1, row=3)

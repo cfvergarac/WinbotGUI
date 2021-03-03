@@ -2,7 +2,7 @@
 
 #DATOS AMBIENTE
 
-&{URL}          QA=https://vuela-uat-old.wingo.com/    QAIN=https://vuela-uat-old.wingo.com/en/inicio     QAL=http://vuela.wingo.landsoft.com.co/    QALIN=http://vuela.wingo.landsoft.com.co/en/inicio       PROD=https://www.wingo.com/es/inicio    PRODIN=https://www.wingo.com/en   PALIADOSQA=https://aliados-qa.wingo.com/es
+&{URL}          QA=https://vuela-uat.wingo.com/    QAIN=https://vuela-uat.wingo.com/en/inicio     QAL=http://vuela.wingo.landsoft.com.co/    QALIN=http://vuela.wingo.landsoft.com.co/en/inicio       PROD=https://www.wingo.com/es/inicio    PRODIN=https://www.wingo.com/en   PALIADOSQA=https://aliados-qa.wingo.com/es
 &{URLCHECKIN}   QACI=https://webcheckin-qa.wingo.com/webcheckin/es     QACIEN=https://webcheckin-qa.wingo.com/webcheckin/en     QACIPROD=https://webcheckin.wingo.com/
 &{URLMMB}       QAMMB=https://mmb-qa.wingo.com       QAMMBEN=https://mmb-qa.wingo.com
 &{URLBOOKING}    QA=https://booking-uat.wingo.com/es/search     PROD=https://booking.wingo.com/es/search    QAIN=https://booking-uat.wingo.com/en/search     PRODIN=https://booking.wingo.com/en/search
